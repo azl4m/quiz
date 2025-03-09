@@ -9,7 +9,7 @@ import QuizComponent from "./components/QuizComponent";
 function App() {
   return (
     <QuizProvider>
-    <div className="max-w-xl mx-auto mt-10">
+    <div className="max-w-xl mx-auto">
       <QuizComponent />
     </div>
   </QuizProvider>
