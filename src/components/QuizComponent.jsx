@@ -28,7 +28,7 @@ const QuizComponent = () => {
   useEffect(() => {
     if (quizStarted) {
       backgroundMusic.current.loop = true;
-      backgroundMusic.current.volume = 0.3;
+      backgroundMusic.current.volume = 0.5;
       backgroundMusic.current.play();
     } else {
       backgroundMusic.current.pause();
