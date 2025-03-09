@@ -15,7 +15,7 @@ const QuizSetup = ({ startQuiz }) => {
           "https://quizapi.io/api/v1/categories",
           {
             params: {
-              apiKey: process.env.REACT_APP_QUIZ_TOKEN,
+              apiKey: import.meta.env.REACT_APP_QUIZ_TOKEN,
             },
           }
         );
