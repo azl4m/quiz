@@ -95,7 +95,9 @@ const QuizComponent = () => {
             Your Score: <span className="text-blue-600">{score}</span>
           </p>
           <button
-            onClick={() => setQuizStarted(false)}
+            onClick={() => {
+              dispatch({ type: "RESET_QUIZ" });
+              setQuizStarted(false)}}
             className="mt-5 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg shadow transition duration-300"
           >
             Restart Quiz
@@ -177,7 +179,7 @@ const QuizComponent = () => {
           <button
             onClick={() => dispatch({ type: "NEXT_QUESTION" })}
             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow transition duration-300"
-            disabled={selectedAnswer === null}
+            
           >
             Next Question
           </button>
