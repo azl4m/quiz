@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { REACT_APP_QUIZ_TOKEN } from "../../key";
+// import { REACT_APP_QUIZ_TOKEN } from "../../key";
 
 const QuizSetup = ({ startQuiz }) => {
   const [category, setCategory] = useState("Linux");
@@ -15,7 +15,7 @@ const QuizSetup = ({ startQuiz }) => {
           "https://quizapi.io/api/v1/categories",
           {
             params: {
-              apiKey: REACT_APP_QUIZ_TOKEN,
+              apiKey: process.env.REACT_APP_QUIZ_TOKEN,
             },
           }
         );

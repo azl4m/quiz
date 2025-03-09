@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext, useReducer } from "react";
-import { REACT_APP_QUIZ_TOKEN } from "../../key";
+// import { REACT_APP_QUIZ_TOKEN } from "../../key";
 const QuizContext = React.createContext();
 const initialState = {
   questions: [],
@@ -42,7 +42,7 @@ export const QuizProvider = ({ children }) => {
     try {
       const response = await axios.get(`https://quizapi.io/api/v1/questions`, {
         params: {
-          apiKey: REACT_APP_QUIZ_TOKEN,
+          apiKey: process.env.REACT_APP_QUIZ_TOKEN,
           category,
           difficulty,
           limit,
