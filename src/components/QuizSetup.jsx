@@ -9,6 +9,8 @@ const QuizSetup = ({ startQuiz }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
+    console.log("key :"+import.meta.env.REACT_APP_QUIZ_TOKEN);
+    
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
