@@ -42,7 +42,7 @@ export const QuizProvider = ({ children }) => {
     try {
       const response = await axios.get(`https://quizapi.io/api/v1/questions`, {
         params: {
-          apiKey: import.meta.env.REACT_APP_QUIZ_TOKEN,
+          apiKey: import.meta.env.VITE_REACT_APP_QUIZ_TOKEN,
           category,
           difficulty,
           limit,
