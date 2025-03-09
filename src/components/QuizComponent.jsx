@@ -20,7 +20,7 @@ const QuizComponent = () => {
   const [quizStarted, setQuizStarted] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30); // 15 seconds per question
+  const [timeLeft, setTimeLeft] = useState(30); 
   const backgroundMusic = useRef(new Audio(backgroundMusicFile));
   const correctAudio = useRef(new Audio(correctSound));
   const wrongAudio = useRef(new Audio(wrongSound));
@@ -28,7 +28,7 @@ const QuizComponent = () => {
   useEffect(() => {
     if (quizStarted) {
       backgroundMusic.current.loop = true;
-      backgroundMusic.current.volume = 0.7;
+      backgroundMusic.current.volume = 0.5;
       backgroundMusic.current.play();
     } else {
       backgroundMusic.current.pause();
